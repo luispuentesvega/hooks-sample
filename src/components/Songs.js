@@ -9,7 +9,8 @@ const Songs = () => {
     { title: 'You are beautiful', id: 3 }
   ]);
 
-  const addSong = (title) => {
+  const addSong = title => {
+    console.log('Inside Add Song::', title);
     setSongs([...songs, { title: title, id: uuid() }]);
   };
 
@@ -20,7 +21,7 @@ const Songs = () => {
           return (<li key={song.id}>{song.title}</li>);
         })}
       </ul>
-      <NewSongForm/>
+      <NewSongForm addSong={addSong}/>
     </div>
   );
 };
