@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import Songs from './components/Songs';
+import SongList from './components/SongList';
 import './App.css';
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
       <p>You clicked {count} times</p>
       <button onClick={() => { setCount(count + 1) }}>Click me!</button>
       <hr/>
-      <Songs/>
+      <SongList/>
     </div>
   );
 }
